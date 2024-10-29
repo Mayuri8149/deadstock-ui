@@ -1,0 +1,160 @@
+<!-- ==================== sidebar section ==============================  -->
+
+<aside class="sidebar" [ngClass]="{'active' : isActive}">
+    <!-- <section> -->
+    <div class="sideHeadingSection">
+        <div class="sideBackBtn" (click)="onCancelClick()">
+            <i class="fa-solid fa-arrow-left backArrow"></i>
+        </div>
+        <h3 class="sidebarHeading">Categories</h3>
+    </div>
+    <ul class="sideBar_list">
+        12345<li class="sideBar_item" [class.active]="activeItem === 1" *ngFor="let item of menus;">
+            <a href="#" class="sidemenu" (click)="setActive(1)" >
+                <img src="../../assets/img/sidebar/agriculture.webp" class="sideIcon" alt="">
+                <img src="../../assets/img/shopCategory/agriculture-garden.webp" class="sideMobIcon" alt="">
+                {{item.name}}
+                <i class="fa-solid fa-plus sideMobPlus"></i>
+            </a>
+            <!-- --------- sub Menu ----------  -->
+            <div class="allSubMenu_div" id="sidd1">
+                <div class="submenu">
+                    <ul>
+                        <li class="hoverSubUl">
+                            <a href="javascript:void(0);">Turing
+                                <i class="fa-solid fa-angle-right hoverSubUlArr"></i>
+                            </a>
+                            <!-- ------ nested SubMenu --------  -->
+                            <div class="nestedSubMenu">
+                                <div class="shopMainCategory">
+                                    <div class="shopDiv">
+                                        <ul class="shopBy">
+                                            <li class="shopHeading">
+                                                <span>Shop by Brand</span>
+                                            </li>
+                                            <li><a href="">KORLOY</a></li>
+                                            <li><a href="">WINTECH</a></li>
+                                            <li><a href="">SANDVIK</a></li>
+                                            <li><a href="">HINDVANTURE</a></li>
+                                            <li><a href="">TEGUTECH</a></li>
+                                            <li><a href="">ISCAR</a></li>
+                                            <li><a href="">ZCC</a></li>
+                                            <li><a href="">OSG</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hoverSubUl">
+                            <a href="javascript:void(0);">Milling
+                                <i class="fa-solid fa-angle-right hoverSubUlArr"></i>
+                            </a>
+                            <!-- ------ nested SubMenu --------  -->
+                            <div class="nestedSubMenu">
+                                <div class="shopMainCategory">
+                                    <div class="shopDiv">
+                                        <ul class="shopBy">
+                                            <li class="shopHeading">
+                                                <span>Shop by Brand</span>
+                                            </li>
+                                            <li><a href="">KORLOY</a></li>
+                                            <li><a href="">WINTECH</a></li>
+                                            <li><a href="">SANDVIK</a></li>
+                                            <li><a href="">HINDVANTURE</a></li>
+                                            <li><a href="">TEGUTECH</a></li>
+                                            <li><a href="">ISCAR</a></li>
+                                            <li><a href="">ZCC</a></li>
+                                            <li><a href="">OSG</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hoverSubUl">
+                            <a href="#">Grooving
+                                <i class="fa-solid fa-angle-right hoverSubUlArr"></i>
+                            </a>
+                            <!-- ------ nested SubMenu --------  -->
+                            <div class="nestedSubMenu">
+                                <div class="shopMainCategory">
+                                    <div class="shopDiv">
+                                        <ul class="shopBy">
+                                            <li class="shopHeading">
+                                                <span>Shop by Brand</span>
+                                            </li>
+                                            <li><a href="">KORLOY</a></li>
+                                            <li><a href="">WINTECH</a></li>
+                                            <li><a href="">SANDVIK</a></li>
+                                            <li><a href="">HINDVANTURE</a></li>
+                                            <li><a href="">TEGUTECH</a></li>
+                                            <li><a href="">ISCAR</a></li>
+                                            <li><a href="">ZCC</a></li>
+                                            <li><a href="">OSG</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hoverSubUl">
+                            <a href="">Threading
+                                <i class="fa-solid fa-angle-right hoverSubUlArr"></i>
+                            </a>
+                            <!-- ------ nested SubMenu --------  -->
+                            <div class="nestedSubMenu">
+                                <div class="shopMainCategory">
+                                    <div class="shopDiv">
+                                        <ul class="shopBy">
+                                            <li class="shopHeading">
+                                                <span>Shop by Brand</span>
+                                            </li>
+                                            <li><a href="">KORLOY</a></li>
+                                            <li><a href="">WINTECH</a></li>
+                                            <li><a href="">SANDVIK</a></li>
+                                            <li><a href="">HINDVANTURE</a></li>
+                                            <li><a href="">TEGUTECH</a></li>
+                                            <li><a href="">ISCAR</a></li>
+                                            <li><a href="">ZCC</a></li>
+                                            <li><a href="">OSG</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p class="sideCategoryHover">
+        <!-- <a href="" class="sideCategory">See All Categories</a> -->
+        <span type="button" class=" sideCategory" data-bs-toggle="modal" data-bs-target="#staticBackdrop">See All
+            Categories</span>
+    </p>
+    <div class="sotreArea" *ngIf="showSidebarPdp">
+        <div class="sideSaleIcon">
+            <a href="">
+                <div>
+                    <img src="../../assets/img/istockphoto.jpg" alt="">
+                </div>
+                Special Offers
+            </a>
+        </div>
+        <div class="sideSaleIcon">
+            <a href="">
+                <div>
+                    <img src="../../assets/img/sellerarea.webp" alt="">
+                </div>
+                Seller Hub
+            </a>
+        </div>
+        <div class="sideSaleIcon borderNone">
+            <a href="">
+                <div>
+                    <img src="../../assets/img/megaphones.png" alt="">
+                </div>
+                Clearance Sale
+            </a>
+        </div>
+    </div>
+    <!-- </section> -->
+</aside>

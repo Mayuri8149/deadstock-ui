@@ -1,0 +1,2 @@
+# Stock
+Deadstock# frontend

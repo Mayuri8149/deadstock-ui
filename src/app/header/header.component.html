@@ -1,0 +1,176 @@
+<header id="header" [class]="headerClass">
+    <div class="top_Header" *ngIf="showHeaderTop">
+        <div class="container max-container">
+            <div class="top_header_content">
+                <a href="#" class="offer_text">
+                    <span> Offers </span>
+                    For Big Discounts - Clearance Sale
+                </a>
+                <div class="topHeader_right">
+                    <div>For Bulk Order Helpline Number: +91 8448449073</div>
+                    <a href="#">
+                        GST
+                    </a>
+                    <a href="">
+                        Sell on industrybuying
+                    </a>
+                    <a href="">
+                        Enterprise Procurement Solution
+                    </a>
+                    <a href="">
+                        Franchise Program
+                    </a>
+                    <a href="">
+                        Apply for Credit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="smallHeader">For any query, email us at <font class="smallHeader_font">test@materialstocks.com</font>
+        or call us on <font class="smallHeader_font">+91 1234567890</font>
+    </div>
+    <nav id="mainNav" class="navbar navbar-expand-lg">
+        <div class="container max-container">
+            <div class="mobFlex">
+                <!-- ========= hamberger icon for Mobile ============  -->
+                <button class="navbar-toggler hamburgerIcon" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation" *ngIf="!isMainPage()">
+                    <span class="navbar-toggler-icon" (click)="onHamburgerClick()">
+                        <i class="fa-solid fa-bars hamberger"></i>
+                    </span>
+                </button>
+                 <!-- ========= product page back aroow btn for Mobile ============  -->
+                <div class="backButton" (click)="goToMainPage()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="shortBy_category" *ngIf="showHeaderTop">
+                    <div class="short_text">
+                        Shop by Category
+                        <div class="col-sm-6 col-lg-3 pdp_sidebar">
+                            <app-sidebar></app-sidebar>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <a class="navbar-brand" href="#">
+                    <img src="../../assets/img/logo.png" class="img-fluid AllLogo" alt="">
+                    <img src="../../assets/img/ib-logo-back.svg" class="img-fluid mobileLogo" alt="">
+                </a>
+            </div>
+
+            <!-- =========================== mobile Nav =========================  -->
+
+            <div class="mobileNav">
+                <div class="mobileCartDrop">
+
+
+                    <div class="mobileCartBucket"> <i class="fa-solid fa-cart-shopping cartIcon"></i></div>
+                    <div class="dropdown">
+                        <div class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-regular fa-user" style="color: black;"></i>
+                        </div>
+                        <ul class="dropdown-menu mobileUser" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="fa-solid fa-user me-2"></i>Login/Register</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-handshake me-2"></i>Pay
+                                    Later</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-coins me-2"></i>IB Coin</a>
+                            </li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#trackOrderModal"><i
+                                        class="fa-solid fa-location-dot me-2"></i>Track
+                                    Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- =========================== mobile Nav end =========================  -->
+
+
+            <div class="inputSearchDiv">
+                <form action="">
+                    <div class="dropdown allCatDiv">
+                        <button class="btn dropdown-toggle allCategoryBtn" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            All Categories
+                        </button>
+                        <ul class="dropdown-menu mt-5" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item drop_item" href="#">All Categories</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Adhesives Sealants and Tapes</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Agriculture Garden & Landscaping</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Abrasives</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Automotive Maintenance and Lubricants</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Bearings</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Construction & Civil Equipments</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Electrical</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Cleaning</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Industrial Automation</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Machinery</a></li>
+                            <li><a class="dropdown-item drop_item" href="#">Motors & Power Transmission</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button class="searchBtn">
+                            <i class="fa-solid fa-magnifying-glass searchBtnIcon"></i>
+                        </button>
+                    </div>
+                    <input class="searchHolder" placeholder="Search Product..." type="text">
+                </form>
+            </div>
+
+            <div class="logRegBtn">
+                <a href="">Login/Register</a>
+            </div>
+            <div type="button" class="locationBtn" data-bs-toggle="modal" data-bs-target="#trackOrderModal">
+                <i class="fa-solid fa-location-dot locIcon"></i>
+                <span> Track <strong>Order</strong></span>
+            </div>
+            <div class="cartBtn">
+                <a href="">
+                    <div>
+                        <i class="fa-solid fa-cart-shopping cartIcon"></i>
+                    </div>
+                    <div>
+                        <span class="badge rounded-pill bg-light text-dark">
+                            0
+                        </span>
+                        <p>
+                            Cart
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="downApp">
+                <div style="text-align: center;">
+                    <a href=""><img src="../../assets/img/playstore.png" class="downloadicon" alt=""></a>
+                    <span style="color: white; margin: 5px;">|</span>
+                    <a href=""><img src="../../assets/img/iosstore.png" class="downloadicon" alt=""></a>
+                </div>
+                <p class="downloadText">
+                    Download the APP!
+                </p>
+            </div>
+        </div>
+    </nav>
+    <!-- ================ main input search for Mobile =================  -->
+    <div class="container max-container">
+        <div class="row MobSearchJs">
+            <div class="col-lg-12 inputRow">
+                <div class="inputSearchMain">
+                    <form action="">
+                        <div>
+                            <button class="searchBtnMain">
+                                <i class="fa-solid fa-magnifying-glass searchBtnIcon"></i>
+                            </button>
+                        </div>
+                        <input class="searchHolder focusNone" placeholder="Search Product, Brands etc..." type="text">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
