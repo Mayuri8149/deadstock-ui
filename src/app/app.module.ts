@@ -13,6 +13,7 @@ import { WhatsAppComponent } from './whats-app/whats-app.component';
 import { FeedbackFromComponent } from './feedback-from/feedback-from.component';
 import { BackToTopButtonComponent } from './back-to-top-button/back-to-top-button.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     WhatsAppComponent,
     FeedbackFromComponent,
-    BackToTopButtonComponent
+    BackToTopButtonComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
